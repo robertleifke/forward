@@ -40,7 +40,7 @@ contract Forward {
         forwardPrice = _forwardPrice;
         settlementDate = _settlementDate;
 
-        emit ContractCreated(buyer, seller, forwardPrice, settlementDate);
+        emit Created(buyer, seller, forwardPrice, settlementDate);
     }
 
     function settle() external payable onlyParties notSettled afterSettlementDate {
